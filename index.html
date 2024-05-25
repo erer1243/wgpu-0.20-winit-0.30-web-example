@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  let wasm;
+  import("./pkg/wgpu_winit_example.js").then(async module => {
+    await module.default();
+    wasm = module;
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("run-button").addEventListener("click", () => {
+      wasm.run_web();
+    });
+  });
+</script>
+</head>
+<body>
+<button id="run-button">Run</button>
+</body>
+</html>
