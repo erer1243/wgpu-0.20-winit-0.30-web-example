@@ -1,3 +1,3 @@
 fn main() {
-    wgpu_visualizer::run();
+    wgpu_winit_example::run();
 }
